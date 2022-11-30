@@ -616,7 +616,7 @@ LimitNPROC=infinity" > /etc/systemd/system/openvpn-server@server.service.d/disab
 		./easyrsa --batch init-pki >/dev/null
 		./easyrsa --batch build-ca nopass >/dev/null 2>&1
 		./easyrsa --batch --days=3650 build-server-full server nopass >/dev/null 2>&1
-		./easyrsa --batch --days=3650 build-client-full "$client" nopass >/dev/null 2>&1
+		./easyrsa --batch --days=3650 build-client-full "$client" >/dev/null 2>&1
 		./easyrsa --batch --days=3650 gen-crl >/dev/null 2>&1
 	)
 	# Move the stuff we need
@@ -853,7 +853,7 @@ else
 			cd /etc/openvpn/server/easy-rsa/ || exit 1
 			(
 				set -x
-				./easyrsa --batch --days=3650 build-client-full "$client" nopass >/dev/null 2>&1
+				./easyrsa --batch --days=3650 build-client-full "$client" >/dev/null 2>&1
 			)
 			# Generates the custom client.ovpn
 			new_client
