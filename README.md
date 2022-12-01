@@ -23,7 +23,7 @@ This script will let you set up your own VPN server in just a few minutes, even 
 First, download the script on your Linux server\*:
 
 ```bash
-wget -O openvpn.sh https://get.vpnsetup.net/ovpn
+wget -O openvpn.sh https://raw.githubusercontent.com/imanabbasi/openvpn-install/master/openvpn-install.sh
 ```
 
 **Option 1:** Auto install OpenVPN using default options.
